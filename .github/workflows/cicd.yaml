@@ -15,7 +15,7 @@ jobs:
      - run: mypy app.py
 
  build:
-   runs-on: ubuntu-latest:
+   runs-on: ubuntu-latest
    steps:
      - uses: actions/checkout@v6
 
@@ -34,5 +34,5 @@ jobs:
        with:
          context: .
          push: true
-         tags: tags: ${{ steps.meta.outputs.tags }}
+         tags: ${{ steps.meta.outputs.tags }}
          labels: ${{ steps.meta.outputs.labels }}
